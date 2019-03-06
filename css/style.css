@@ -1,0 +1,293 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/*********RESET CSS****/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*
+--------------------------------------
+				MON CSS
+----------------------------------------
+*/
+*{
+	box-sizing:border-box; /**l'étoile signifie que cet attribut s'applique à tout le code**/
+}
+html{
+	scroll-behavior:smooth;/***permet de faire une transition douce d'un menu à l'autre****/
+}
+body{
+	/* font-family: 'Roboto', sans-serif; */
+	font-family: 'Lora', serif;
+	/* font-family: 'Laila', sans-serif; */
+
+}
+/*
+------------------------------------------
+			HEADER GAUCHE
+-------------------------------------------
+*/
+
+header{
+	height:100vh;
+	position:fixed;
+	min-width:10%;
+}
+/****partie 1/3 du header****/
+#profile{
+	background:#17181b;
+	height:20%;
+	
+}
+#profile img {
+	border-radius: 50%;
+	max-width:80%;
+	height: auto;
+	position: absolute;
+	top:22px;
+	left:10%;
+	/* filter: grayscale(100%); */
+
+}
+/*****partie 2/3 du header****/
+.mainmenu{
+	background:#17181b;
+	height:70%;
+	display: flex;
+    justify-content: center;
+    
+}
+.mainmenu ul{
+	margin-top:120px;
+}
+.mainmenu li{
+	padding-bottom:20px;
+}
+.mainmenu a{
+	text-decoration:none;
+	font-size:30px;
+	text-align:center;
+	color:#777;
+	font-variant:small-caps;
+}
+.mainmenu a:hover{
+	box-shadow:none;
+	background:none;
+	color:#ecfbfa;
+	transition:0.5s;
+}
+
+
+/****partie 3/3 du header***/
+.reseauxsociaux{
+	background:#17181b;
+	height:10%;
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+}
+.icons{
+    font-size:27px;
+	color:#6a707d;
+}
+.icons:hover{
+	box-shadow:none;
+	background:none;
+	color:#ecfbfa;
+	transition:0.5s;
+}
+
+/*
+------------------------------
+			MAIN DROITE
+-------------------------------
+*/
+main{
+	margin-left:10%;
+}
+.clear{
+	clear:both;
+}
+.imageFond{
+	background:url(../img/moraine-cover2.jpg) no-repeat;
+	background-size:cover;
+	/* height:100vh; */
+	/* width:100%; */
+}
+h1{
+	font-size: 62px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: lighter;
+	color:white;
+	text-align: center;
+	margin-top: 40vh;
+	text-shadow: 3px 2px 2px rgba(15, 15, 15, 0.74);
+}
+.lastname{
+	color:#32c6b2;
+	font-weight: 800;
+}
+.typing-carousel{
+	color:white;
+	text-align: center;
+	text-shadow: 1px 1px 1px rgba(15, 15, 15, 0.74);
+}
+.iam{
+	font-weight:100;
+	font-size: 35px;
+	margin-right:13px;
+}
+.words-wrapper{
+	font-size: 45px;
+	font-weight: 600;
+	border-bottom: 3px solid #32c6b2;
+	
+	
+}
+section{
+	height:100vh;
+	padding:20px;
+}
+h2{
+	font-size:48px;
+	font-variant:small-caps;
+	letter-spacing: .1rem;
+	padding:45px 35px 6px 52px;
+	color:#32c6b2;
+}
+p{
+	font-size:15px;
+    padding:38px;
+    width: 85%;
+	margin: auto;
+	line-height: 180%;
+}
+/********************* CONTACT PAGE**************/
+.contact-container{
+	display:flex;
+	flex-wrap: wrap;
+}
+
+/***Contact Form*****/
+.form{
+	width: 45%;
+    height: 116px;
+    margin: 0 auto;
+}
+
+.contact-form{
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-deco{
+	border: 0;
+    border-bottom: 2px solid #17181b;
+    margin: 120px 0;
+    height: 3em;
+    font-size: 17px;
+	width: 45%;
+	font-family: 'Lora', serif;
+
+}
+
+.textarea-deco{
+	border:0;
+	border-bottom: 2px solid #17181b;
+	margin-bottom: 5px;
+	height:auto;
+	font-size:17px;
+	width:100%;
+	font-family: 'Lora', serif;
+}
+
+.submit-button{
+	margin: 45px auto;
+    padding: 10px 20px;
+    border: 2px solid #17181b;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    background: #17181b;
+    color: #ecfbfa;
+}
+
+.submit-button:hover{
+	border: 2px solid #17181b;
+	background:#17181b;
+	color:#32c6b2;
+	transition:0.5s;
+}
+
+/***** My contact details *****/
+
+.contact-details{
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
