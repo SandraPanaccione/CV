@@ -74,34 +74,43 @@ body{
 header{
 	height:100vh;
 	position:fixed;
-	min-width:10%;
+	max-width: 20%;
+    display: flex;
+    flex-direction: column;
 }
 /****partie 1/3 du header****/
 #profile{
 	background:#17181b;
-	height:20%;
-	
+	height: 27%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 #profile img {
-	border-radius: 50%;
+	/* border-radius: 50%; */
 	max-width:80%;
 	height: auto;
-	position: absolute;
+	/* position: absolute;
 	top:22px;
-	left:10%;
-	/* filter: grayscale(100%); */
+	left:10%; */
+	filter: grayscale(100%);
 
+}
+#me{
+	color:#777;
+    margin-top: 18px;
+    font-size: 20px;
+    font-weight: 900;
+    font-variant: small-caps;
 }
 /*****partie 2/3 du header****/
 .mainmenu{
 	background:#17181b;
-	height:70%;
-	display: flex;
+	height: 69%;
+    display: flex;
     justify-content: center;
-    
-}
-.mainmenu ul{
-	margin-top:120px;
+    align-items: center;
 }
 .mainmenu li{
 	padding-bottom:20px;
@@ -124,11 +133,12 @@ header{
 /****partie 3/3 du header***/
 .reseauxsociaux{
 	background:#17181b;
-	height:10%;
-	display:flex;
-	justify-content:space-around;
-	align-items:center;
+	height: 8%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
+
 .icons{
     font-size:27px;
 	color:#6a707d;
@@ -199,7 +209,7 @@ h2{
 	padding:45px 35px 6px 52px;
 	color:#32c6b2;
 }
-p{
+.block-text{
 	font-size:15px;
     padding:38px;
     width: 85%;
@@ -207,15 +217,10 @@ p{
 	line-height: 180%;
 }
 /********************* CONTACT PAGE**************/
-.contact-container{
-	display:flex;
-	flex-wrap: wrap;
-}
 
 /***Contact Form*****/
 .form{
 	width: 45%;
-    height: 116px;
     margin: 0 auto;
 }
 
@@ -228,7 +233,7 @@ p{
 .input-deco{
 	border: 0;
     border-bottom: 2px solid #17181b;
-    margin: 120px 0;
+    margin: 80px 0 150px 0;
     height: 3em;
     font-size: 17px;
 	width: 45%;
@@ -268,12 +273,29 @@ p{
 /***** My contact details *****/
 
 .contact-details{
-	
+	display: flex;
+	justify-content: space-around;
+	width: 90%;
+    margin: 7rem auto;
 }
-
-
-
-
+.email-detail, .address-detail, .phone-detail{
+	display: flex;
+    align-items: center;
+	flex-direction: column;
+	width: 30%;
+}
+.contact-details-icons{
+	font-size: 2rem;
+	padding-bottom: 2rem;
+	color:#32c6b2;
+}
+.contact-details-label{
+	color:#333;
+}
+.contact-details-link{
+	text-decoration: none;
+	color:#333;
+}
 
 
 

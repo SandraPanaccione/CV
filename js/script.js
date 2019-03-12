@@ -54,3 +54,15 @@ var TxtRotate = function(el, toRotate, period) {
     css.innerHTML = ".words-wrapper > .wrap { border-right: 0.08em solid #666 }";
     document.body.appendChild(css);
   };
+
+  // CALCULATE AGE
+
+function getAge(){
+    var birthDate = new Date("1989/1/26");
+    var today = new Date();
+
+    return age = ((today.getTime() - birthDate.getTime()) / 31536000000).toFixed(0);
+}
+
+  document.getElementById("myAge").textContent = " " + getAge() + " ans,";   
+    
