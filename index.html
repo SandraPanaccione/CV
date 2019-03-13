@@ -13,19 +13,31 @@
     <body>
 			<header>
 				<!----Profile picture---->
-				<div id="profile">
-					<img src="img/profile2.png" alt="Sandra Panaccione" name="Sandra Panaccione">
-					<div id="me">Sandra Panaccione</div>
+				<div class="profile">
+					<img class="profile__image" src="img/profile2.png" alt="Sandra Panaccione" name="Sandra Panaccione">
+					<div class="profile__label">
+						<a class="profile__link" href="#home" >Sandra Panaccione</a>
+					</div>
 				</div>
 				<!--Nav Main menu--->
-				<nav class="mainmenu">
+				<nav class="main-menu">
 					<ul>
-						<li><a href="#home"><i class="fas fa-home"></i></a></li>
-						<li><a href="#about">A propos</a></li>
-						<li><a href="#CV">CV</a></li>
-						<li><a href="#portfolio">Portfolio</a></li>
-						<li><a href="#blog">Blog</a></li>
-						<li><a href="#contact">Contact</a></li>
+						<!-- <li><a href="#home"><i class="fas fa-home"></i></a></li> -->
+						<li class="main-menu__item">
+							<a href="#about" class="main-menu__item__link">A propos</a>
+						</li>
+						<li class="main-menu__item">
+							<a href="#CV" class="main-menu__item__link">CV</a>
+						</li>
+						<li class="main-menu__item">
+							<a href="#portfolio" class="main-menu__item__link">Portfolio</a>
+						</li>
+						<li class="main-menu__item">
+							<a href="#blog" class="main-menu__item__link">Blog</a>
+						</li>
+						<li class="main-menu__item">
+							<a href="#contact" class="main-menu__item__link">Contact</a>
+						</li>
 					</ul>
 				</nav>
 				<!--- Menu social networks -->
