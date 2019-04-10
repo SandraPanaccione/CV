@@ -1,3 +1,4 @@
+// ROTATING TEXT IN PRESENTATION 
 var TxtRotate = function(el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
@@ -50,14 +51,16 @@ window.onload = function() {
       new TxtRotate(elements[i], JSON.parse(toRotate), period);
     }
   }
-  // INJECT CSS
+  // Inject CSS
   var css = document.createElement("style");
   css.type = "text/css";
   css.innerHTML = ".words-wrapper > .wrap { border-right: 0.08em solid #666 }";
   document.body.appendChild(css);
 };
 
-// CALCULATE AGE
+
+
+// CALCULATE MY AGE
 
 function getAge() {
   var birthDate = new Date("1989/1/26");
@@ -70,18 +73,39 @@ function getAge() {
 
 document.getElementById("myAge").textContent = " " + getAge() + " ans,";
 
-// ACTIVE LINKS IN MAIN NAV
+// ACTIVE LINKS IN MAIN NAV ON CLICK
 
-function switchColor() {
-  document.querySelectorAll("a.main-menu__item__link, a.profile__link").forEach(activeLink => {
-    activeLink.classList.remove("main-menu__item__link_selected");
+// function switchColor() {
+//   document.querySelectorAll("a.main-menu__item__link, a.profile__link").forEach(activeLink => {
+//     activeLink.classList.remove("main-menu__item__link_selected");
+//   });
+
+//   this.classList.add("main-menu__item__link_selected");
+// }
+
+// document.querySelectorAll("a.main-menu__item__link, a.profile__link").forEach(activeLink => {
+//   activeLink.addEventListener('click', switchColor);
+// });
+
+
+// ACTIVE LINKS IN MAIN NAV ON SCROLL
+
+let mainNavLinks = document.querySelectorAll("a.main-menu__item__link, a.profile__link");
+
+window.addEventListener("scroll", event =>{
+  let fromTop = window.scrollY;
+  
+  mainNavLinks.forEach(link => {
+    let section = document.querySelector(link.hash);
+  
+
+    if(
+      section.offsetTop <= fromTop &&
+      section.offsetTop + section.offsetHeight > fromTop
+    ){
+      link.classList.add("current")
+    } else {
+      link.classList.remove("current");
+    }
   });
-
-  this.classList.add("main-menu__item__link_selected");
-}
-
-document.querySelectorAll("a.main-menu__item__link, a.profile__link").forEach(activeLink => {
-  activeLink.addEventListener('click', switchColor);
 });
-
-

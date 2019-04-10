@@ -109,7 +109,9 @@ header{
 	border-bottom: 5px double;
 	padding-bottom:2px;
 }
-.profile__link:hover{
+.profile__link:hover,
+/* .profile__link_selected, */
+.profile__link.current {
 	box-shadow:none;
 	background:none;
 	color:#ecfbfa;
@@ -133,13 +135,14 @@ header{
 	color:#777;
 	font-variant:small-caps;
 }
-.main-menu__item__link:hover, .main-menu__item__link_selected{
+.main-menu__item__link:hover, 
+/* .main-menu__item__link_selected, */
+.main-menu__item__link.current {
 	box-shadow:none;
 	background:none;
 	color:#ecfbfa;
 	transition:0.5s;
 }
-
 
 /****partie 3/3 du header***/
 .reseauxsociaux{
@@ -227,8 +230,95 @@ h2{
 	margin: auto;
 	line-height: 180%;
 }
-/********************* CONTACT PAGE**************/
 
+/*
+---------------------------------------
+		PAGE CV 
+---------------------------------------
+*/
+.cv__container{
+	display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+.cv__sections__title{
+	font-size:1.3em;
+	font-variant: small-caps;
+	margin-bottom: 10%
+}
+.cv__experience__block{
+	/* border-left:5px solid #32c6b2; */
+	margin:10px auto;
+	/* padding-left: 5%; */
+	font-size: 15px;
+	line-height: 1.3em;
+	display:flex;
+}
+.cv__experience__labels{
+	text-align: right;
+    padding-right: 4%;
+}
+.cv__experience__infos{
+	border-left:5px solid #32c6b2;
+	padding-left: 5%;
+}
+.cv__position__details{
+	font-size: 12px;
+    list-style: inside;
+}
+
+.cv__content__education{
+	display:flex;
+	align-items: center;
+	margin: 10px auto;
+}
+.cv__education__datas{
+	background: #32c6b2;
+	border-radius:50%;
+	width:70px;
+	height:70px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.cv__education__data{
+	color: white;
+	margin:4px;
+}
+.cv__education__infos{
+	font-size: 15px;
+	margin-left: 19px;
+	line-height: 1.3em;
+}
+.cv__education__diploma, .cv__experience__position{
+	font-weight: 600;
+}
+.cv__education__school, .cv__experience__entreprise{
+	font-style: italic;
+    font-size: 13px;
+}
+.cv__education__country, .cv__experience__country{
+	font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+---------------------------------------
+		PAGE CONTACT 
+---------------------------------------
+*/
 /***Contact Form*****/
 .form{
 	width: 45%;
